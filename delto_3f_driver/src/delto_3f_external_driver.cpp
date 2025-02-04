@@ -301,6 +301,31 @@ void DeltoExternalDriver::targetjoint_callback(const std_msgs::msg::Float32Multi
     target_joint_state = std::vector<double>(msg->data.begin(), msg->data.end());
 }
 
+std::vector<double> DeltoExternalDriver::Torque2duty(std::vector<double> tq_u)
+{
+
+    std::vector<double> duty(12, 0.0);
+
+    for (int i = 0; i < 12; ++i)
+    {
+        double v = 13.875 / 1.15 * tq_u[i];
+
+        duty[i] = 100.0 * v / 11.1;
+        
+        //clamp -100 ~ 100
+        if (duty[i] > 100.0)
+        {
+            duty[i] = 100.0;
+        }
+        else if (duty[i] < -100.0)
+        {
+            duty[i] = -100.0;
+        }
+    }
+
+    return duty;
+}
+
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
