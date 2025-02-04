@@ -31,6 +31,11 @@ public:
 private:
     void joint_state_publisher();
     void timer_callback();
+    std::vector<double> JointControl(std::vector<double> target_joint_state,
+                                                  std::vector<double> current_joint_state,
+                                                  std::vector<double> joint_dot,
+                                                  std::vector<double> kp,
+                                                  std::vector<double> kd);
     void targetjoint_callback(const std_msgs::msg::Float32MultiArray::SharedPtr msg);
   
     std::vector<double> Torque2Duty(std::vector<double> tq_u);
