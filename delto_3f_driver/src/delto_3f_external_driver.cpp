@@ -277,6 +277,23 @@ void DeltoExternalDriver::timer_callback()
 
     delto_client->send_duty(calcduty);
 }
+std::vector<double> DeltoExternalDriver::JointControl(std::vector<double> target_joint_state,
+                                                  std::vector<double> current_joint_state,
+                                                  std::vector<double> joint_dot,
+                                                  std::vector<double> kp,
+                                                  std::vector<double> kd)
+{
+
+    std::vector<double> tq_u(12, 0.0);
+
+    //std::cout << "kp[0] " << kp[0] << "kd[0] " <<kd[0] <<  target_joint_state[0] <<" "<<current_joint_state[0]<<" "<< joint_dot[0] << std::endl;
+    for (int i = 0; i < 12; ++i)
+    {
+        
+        tq_u[i] = kp[i] * (target_joint_state[i] - current_joint_state[i]) - (kd[i] * joint_dot[i]);
+    }
+    return tq_u;
+}
 
 void DeltoExternalDriver::targetjoint_callback(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
 {
