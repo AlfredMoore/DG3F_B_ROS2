@@ -301,7 +301,7 @@ void DeltoExternalDriver::targetjoint_callback(const std_msgs::msg::Float32Multi
     target_joint_state = std::vector<double>(msg->data.begin(), msg->data.end());
 }
 
-std::vector<double> DeltoExternalDriver::Torque2duty(std::vector<double> tq_u)
+std::vector<double> DeltoExternalDriver::Torque2Duty(std::vector<double> tq_u)
 {
 
     std::vector<double> duty(12, 0.0);
