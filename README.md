@@ -121,10 +121,6 @@ ros2 launch delto_description dg2f_display.launch.py
 ```
 
 ```bash
-ros2 launch delto_description dg2f_display.launch.py
-```
-
-```bash
 ros2 launch delto_3f_driver delto_3f_bringup.launch.py delto_ip:=192.168.0.100 delto_port:=502
 ```
 
