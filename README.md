@@ -60,14 +60,19 @@ Some physical measurements (like PID Gain, inertia) may not be accurate. Adjustm
 - Check this  [Gazebo installation site](https://gazebosim.org/docs/latest/ros_installation).
 ```
 sudo apt-get install ros-humble-ros-gz
-
 ```
+
 3. **Moveit Install**
 ```
 sudo apt install ros-humble-moveit
 ```
 
-3. **Create a new ROS2 workspace**:
+4. **ROS2 Control Install**
+```
+sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
+```
+
+5. **Create a new ROS2 workspace**:
 
   ```bash
   
