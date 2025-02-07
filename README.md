@@ -78,7 +78,7 @@ sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
   
   cd your_ros2_ws/src
   git clone https://github.com/Tesollo-Delto/DELTO_ROS2
-  coclon build 
+  colon build 
   ```
 
 ## How to use Delto Gripper
