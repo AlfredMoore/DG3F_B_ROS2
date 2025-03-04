@@ -4,8 +4,8 @@
 <name>delto_description</name>
   <version>0.0.1</version>
 <description>The delto_description package</description>
-  <maintainer email="khc@tesollo.com">hong</maintainer>
-  <license>BSD</license>
+  <maintainer email="khc@tesollo.com">hongcheol</maintainer>
+  <license>BSD-3-Clause</license>
 
   <depend>xacro</depend>
   <depend>rviz2</depend>
