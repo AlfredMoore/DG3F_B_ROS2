@@ -1,4 +1,14 @@
 <?xml version="1.0"?>
+
+<!--
+    delto_gripper_3f.ros2_control.xacro
+    Licensed under the BSD-3-Clause
+    Copyright (c) 2025 Tesollo Inc.
+    See LICENSE file for details.
+  Reference:
+  * https://tesollo.com/dg-3f/
+-->
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="delto_gripper_3f_ros2_control" params="name initial_positions_file">
         <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)['initial_positions']}"/>
