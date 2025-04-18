@@ -13,7 +13,7 @@
         - Fixed inertial parameters for l_1_x links
         - Added damping and frictionloss to joints
     -->
-    <compiler angle="radian" meshdir="meshes" texturedir="texture" autolimits="true"/>
+    <compiler angle="radian" meshdir="assets" texturedir="texture" autolimits="true"/>
     <asset>
         <!--Robot Gripper-->
         <mesh file="mount/mount.STL"/>

@@ -1,0 +1,26 @@
+<mujoco model="panda nohand">
+  <compiler angle="radian" meshdir="assets" autolimits="true"/>
+
+  <option integrator="implicitfast" impratio="10"/>
+
+  <default>
+    <include file="arm/default.xml"/>
+  </default>
+
+  <asset>
+    <include file="arm/asset.xml"/>
+  </asset>
+
+  <worldbody>
+    <light name="top" pos="0 0 2" mode="trackcom"/>
+    <include file="arm/body.xml"/>
+  </worldbody>
+
+  <actuator>
+    <include file="arm/actuator.xml"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0 -1.57079 0 1.57079 -0.7853" ctrl="0 0 0 -1.57079 0 1.57079 -0.7853"/>
+  </keyframe>
+</mujoco>

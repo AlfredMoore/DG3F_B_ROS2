@@ -1,0 +1,17 @@
+<actuator>
+    <position name="act_j_1_1" joint="j_1_1" kp="100" ctrlrange="-1.0472 1.0472"/>
+    <position name="act_j_1_2" joint="j_1_2" kp="100" ctrlrange="-1.76278 1.76278"/>
+    <position name="act_j_1_3" joint="j_1_3" kp="100" ctrlrange="-0.15708 2.53073"/>
+    <position name="act_j_1_4" joint="j_1_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+
+    <position name="act_j_2_1" joint="j_2_1" kp="100" ctrlrange="-1.91986 0.139626"/>
+    <position name="act_j_2_2" joint="j_2_2" kp="100" ctrlrange="-1.76278 1.76278"/>
+    <position name="act_j_2_3" joint="j_2_3" kp="100" ctrlrange="-0.15708 2.53073"/>
+    <position name="act_j_2_4" joint="j_2_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+
+    <position name="act_j_3_1" joint="j_3_1" kp="100" ctrlrange="-0.0872665 2.00713"/>
+    <position name="act_j_3_2" joint="j_3_2" kp="100" ctrlrange="-1.76278 1.76278"/>
+    <position name="act_j_3_3" joint="j_3_3" kp="100" ctrlrange="-0.15708 2.53073"/>
+    <position name="act_j_3_4" joint="j_3_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+</actuator>
+

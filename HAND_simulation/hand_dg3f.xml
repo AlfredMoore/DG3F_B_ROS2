@@ -1,0 +1,42 @@
+<mujoco model="dg3f">
+    <!--
+        delto_gripper_3f.xml
+        Licensed under the BSD-3-Clause
+        Copyright (c) 2025 Tesollo Inc.
+        See LICENSE file for details.
+
+        Reference:
+        * https://tesollo.com/dg-3f/
+
+        Modifications by Alfred Moore 2025
+        - Added actuators with limits
+        - Fixed inertial parameters for l_1_x links
+        - Added damping and frictionloss to joints
+    -->
+    <compiler angle="radian" meshdir="assets" texturedir="texture" autolimits="true"/>
+    <asset>
+        <!--Robot Gripper-->
+        <include file="hand/asset.xml"/>
+    </asset>
+
+    <default>
+        <include file="hand/default.xml"/>
+    </default>
+
+    <worldbody>
+        <!--Camera parameters-->
+        <camera name="main" mode="fixed" target="base_link_dg" pos="2 2 2.7" axisangle="2 2 -2 1"/>
+        <camera name="top_down" mode="fixed" target="base_link_dg" pos="0 -0.6 2.0" axisangle="2 2 2 0"/>
+        <camera name="side" mode="fixed" target="base_link_dg" pos="0.8 -0.6 1.0" quat="0.5 0.5 0.5 0.5"/>
+
+        <light name="top" pos="0 0 2" mode="trackcom"/>
+
+        <include file="hand/body.xml"/>
+    </worldbody>
+
+    <actuator>
+        <include file="hand/actuator.xml"/>
+    </actuator>
+
+
+</mujoco>

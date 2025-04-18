@@ -7,11 +7,6 @@
 
         Reference:
         * https://tesollo.com/dg-3f/
-
-        Modifications by Alfred Moore 2025
-        - Added actuators with limits
-        - Fixed inertial parameters for l_1_x links
-        - Added damping and frictionloss to joints
     -->
     <compiler angle="radian" meshdir="meshes" texturedir="texture" autolimits="true"/>
     <asset>
@@ -95,20 +90,16 @@
                 <geom class="visual_base_dg" />
                 <body name="l_1_1" pos="0.0265 0.0 0.06435" >
                     <geom class="visual_l_1_1"/>
-                    <joint name="j_1_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
-                    <inertial mass="0.046" pos="3.906e-4 3.121e-8 -0.014" fullinertia="1.675e-5 1.924e-5 6.292e-6 2.001e-11 1.928e-6 2.206e-11"/>
+                    <joint name="j_1_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28"/>
                     <body name="l_1_2" pos="-0.00115 0.0 0.04235" >
                         <geom class="visual_l_1_2"/>
-                        <joint name="j_1_2" pos="0.0 0.0 0.0" axis="1 0 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
-                        <inertial mass="0.027" pos="0.01 3.444e-6 0.016" fullinertia="6.787e-6 6.313e-6 3.652e-6 -4.808e-9 -1.152e-6 -7.457e-9"/>
+                        <joint name="j_1_2" pos="0.0 0.0 0.0" axis="1 0 0" limited="true" range="-6.28 6.28"/>
                         <body name="l_1_3" pos="0.03258 0.0 0.02022">
                             <geom class="visual_l_1_3"/>
-                            <joint name="j_1_3" pos="0.0 0.0 0.0" axis="0 -1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
-                            <inertial mass="0.045" pos="0.014 -4.527e-4 -3.953e-5" fullinertia="6.508e-6 1.691e-5 1.494e-5 1.513e-7 -4.796e-8 2.389e-9"/>
+                            <joint name="j_1_3" pos="0.0 0.0 0.0" axis="0 -1 0" limited="true" range="-6.28 6.28"/>
                             <body name="l_1_4" pos="0.0434 0.0 0.0" >
+                                <joint name="j_1_4" pos="0.0 0.0 0.0" axis="0 -1 0" limited="true" range="-6.28 6.28"/>
                                 <geom class="visual_l_1_4"/> 
-                                <joint name="j_1_4" pos="0.0 0.0 0.0" axis="0 -1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
-                                <inertial mass="0.041" pos="0.012 -2.269e-4 -4.676e-5" fullinertia="5.331e-6 1.086e-5 9.902e-6 -6.732e-8 -1.806e-8 6.130e-10"/>
                                 <body name="l_1_tip" pos="0.0315 0.0 0.0" >
                                     <inertial mass="0.015" pos="0.045 -4.360e-4 -7.220e-8" fullinertia="9.617e-7 1.595e-6 1.300e-6 3.158e-8 2.069e-12 1.087e-11"/>
                                     <geom class="visual_l_1_tip"/>
@@ -119,19 +110,19 @@
                 </body>
                 <body name="l_2_1" pos="-0.01334 0.023 0.06435">
                     <geom class="visual_l_2_1"/>
-                    <joint name="j_2_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                    <joint name="j_2_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28"/>
                     <inertial mass="0.046" pos="3.906e-4 3.121e-8 -0.014" fullinertia="1.675e-5 1.924e-5 6.292e-6 2.001e-11 1.928e-6 2.206e-11"/>
                     <body name="l_2_2" pos="0.00115 0.0 0.04235" >
                         <geom class="visual_l_2_2"/>
-                        <joint name="j_2_2" pos="0.0 0.0 0.0" axis="-1 0 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                        <joint name="j_2_2" pos="0.0 0.0 0.0" axis="-1 0 0" limited="true" range="-6.28 6.28"/>
                         <inertial mass="0.027" pos="0.01 3.444e-6 0.016" fullinertia="6.787e-6 6.313e-6 3.652e-6 -4.808e-9 -1.152e-6 -7.457e-9"/>
                         <body name="l_2_3" pos="-0.03258 0.0 0.02022" >
                             <geom class="visual_l_2_3"/>
-                            <joint name="j_2_3" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                            <joint name="j_2_3" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28"/>
                             <inertial mass="0.045" pos="0.014 -4.527e-4 -3.953e-5" fullinertia="6.508e-6 1.691e-5 1.494e-5 1.513e-7 -4.796e-8 2.389e-9"/>
                             <body name="l_2_4" pos="-0.0434 0.0 0.0" >
                                 <geom class="visual_l_2_4"/>
-                                <joint name="j_2_4" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                                <joint name="j_2_4" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28"/>
                                 <inertial mass="0.041" pos="0.012 -2.269e-4 -4.676e-5" fullinertia="5.331e-6 1.086e-5 9.902e-6 -6.732e-8 -1.806e-8 6.130e-10"/>
                                 <body name="l_2_tip" pos="-0.0315 0.0 0.0" >
                                     <geom class="visual_l_2_tip"/>
@@ -143,19 +134,19 @@
                 </body>
                 <body name="l_3_1" pos="-0.01334 -0.023 0.06435" >
                     <geom class="visual_l_2_1"/>
-                    <joint name="j_3_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                    <joint name="j_3_1" pos="0.0 0.0 0.0" axis="0 0 1" limited="true" range="-6.28 6.28"/>
                     <inertial mass="0.046" pos="3.906e-4 3.121e-8 -0.014" fullinertia="1.675e-5 1.924e-5 6.292e-6 2.001e-11 1.928e-6 2.206e-11"/>
                     <body name="l_3_2" pos="0.00115 0.0 0.04235" >
                         <geom class="visual_l_2_2"/>
-                        <joint name="j_3_2" pos="0.0 0.0 0.0" axis="-1 0 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                        <joint name="j_3_2" pos="0.0 0.0 0.0" axis="-1 0 0" limited="true" range="-6.28 6.28"/>
                         <inertial mass="0.027" pos="0.01 3.444e-6 0.016" fullinertia="6.787e-6 6.313e-6 3.652e-6 -4.808e-9 -1.152e-6 -7.457e-9"/>
                         <body name="l_3_3" pos="-0.03258 0.0 0.02022" >
                             <geom class="visual_l_2_3"/>
-                            <joint name="j_3_3" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                            <joint name="j_3_3" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28"/>
                             <inertial mass="0.045" pos="0.014 -4.527e-4 -3.953e-5" fullinertia="6.508e-6 1.691e-5 1.494e-5 1.513e-7 -4.796e-8 2.389e-9"/>
                             <body name="l_3_4" pos="-0.0434 0.0 0.0" >
                                 <geom class="visual_l_2_4"/>
-                                <joint name="j_3_4" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28" damping="1.1" frictionloss="1.1"/>
+                                <joint name="j_3_4" pos="0.0 0.0 0.0" axis="0 1 0" limited="true" range="-6.28 6.28"/>
                                 <inertial mass="0.041" pos="0.012 -2.269e-4 -4.676e-5" fullinertia="5.331e-6 1.086e-5 9.902e-6 -6.732e-8 -1.806e-8 6.130e-10"/>
                                 <body name="l_3_tip" pos="-0.0315 0.0 0.0" >
                                     <inertial mass="0.015" pos="0.045 -4.360e-4 -7.220e-8" fullinertia="9.617e-7 1.595e-6 1.300e-6 3.158e-8 2.069e-12 1.087e-11"/>
@@ -170,20 +161,20 @@
     </worldbody>
 
     <actuator>
-        <position name="act_j_1_1" joint="j_1_1" kp="100" ctrlrange="-1.0472 1.0472"/>
-        <position name="act_j_1_2" joint="j_1_2" kp="100" ctrlrange="-1.76278 1.76278"/>
-        <position name="act_j_1_3" joint="j_1_3" kp="100" ctrlrange="-0.15708 2.53073"/>
-        <position name="act_j_1_4" joint="j_1_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+        <position name="act_j_1_1" joint="j_1_1" kp="100"/>
+        <position name="act_j_1_2" joint="j_1_2" kp="100"/>
+        <position name="act_j_1_3" joint="j_1_3" kp="100"/>
+        <position name="act_j_1_4" joint="j_1_4" kp="100"/>
 
-        <position name="act_j_2_1" joint="j_2_1" kp="100" ctrlrange="-1.91986 0.139626"/>
-        <position name="act_j_2_2" joint="j_2_2" kp="100" ctrlrange="-1.76278 1.76278"/>
-        <position name="act_j_2_3" joint="j_2_3" kp="100" ctrlrange="-0.15708 2.53073"/>
-        <position name="act_j_2_4" joint="j_2_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+        <position name="act_j_2_1" joint="j_2_1" kp="100"/>
+        <position name="act_j_2_2" joint="j_2_2" kp="100"/>
+        <position name="act_j_2_3" joint="j_2_3" kp="100"/>
+        <position name="act_j_2_4" joint="j_2_4" kp="100"/>
 
-        <position name="act_j_3_1" joint="j_3_1" kp="100" ctrlrange="-0.0872665 2.00713"/>
-        <position name="act_j_3_2" joint="j_3_2" kp="100" ctrlrange="-1.76278 1.76278"/>
-        <position name="act_j_3_3" joint="j_3_3" kp="100" ctrlrange="-0.15708 2.53073"/>
-        <position name="act_j_3_4" joint="j_3_4" kp="100" ctrlrange="-0.226893 2.02458"/>
+        <position name="act_j_3_1" joint="j_3_1" kp="100"/>
+        <position name="act_j_3_2" joint="j_3_2" kp="100"/>
+        <position name="act_j_3_3" joint="j_3_3" kp="100"/>
+        <position name="act_j_3_4" joint="j_3_4" kp="100"/>
     </actuator>
 
 

@@ -1,0 +1,15 @@
+<asset>
+    <!--Robot Gripper-->
+    <mesh file="mount/mount.STL"/>
+    <mesh file="dg3f/base_link.STL"/>
+    <mesh file="dg3f/l_1_1.STL"/>
+    <mesh file="dg3f/l_1_2.STL"/>
+    <mesh file="dg3f/l_1_3.STL"/>
+    <mesh file="dg3f/l_1_4.STL"/>
+    <mesh file="dg3f/l_1_tip.STL"/>
+    <mesh file="dg3f/l_2_1.STL"/>
+    <mesh file="dg3f/l_2_2.STL"/>
+    <mesh file="dg3f/l_2_3.STL"/>
+    <mesh file="dg3f/l_2_4.STL"/>
+    <mesh file="dg3f/l_2_tip.STL"/>
+</asset>

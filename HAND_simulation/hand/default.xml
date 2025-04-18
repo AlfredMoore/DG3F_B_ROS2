@@ -1,0 +1,50 @@
+<default class="main">
+    <default class="dg3f">
+        <joint type="hinge" axis="0 0 1" springdamper="1e-2 50.0" armature="1e-3"/>
+        <geom density="800"/>
+
+        <default class="dg3f/visual">
+            <geom type="mesh" group="1" contype="0" conaffinity="0"/>
+
+            <!--Robot Gripper-->
+            <default class="dg3f/visual/visual_mount">
+                <geom mesh="mount" />
+            </default>
+
+            <default class="dg3f/visual/visual_base_dg">
+                <geom mesh="base_link" />
+            </default>
+            <default class="dg3f/visual/visual_l_1_1">
+                <geom mesh="l_1_1" />
+            </default>
+            <default class="dg3f/visual/visual_l_1_2">
+                <geom mesh="l_1_2" />
+            </default>
+            <default class="dg3f/visual/visual_l_1_3">
+                <geom mesh="l_1_3" />
+            </default>
+            <default class="dg3f/visual/visual_l_1_4">
+                <geom mesh="l_1_4" />
+            </default>
+            <default class="dg3f/visual/visual_l_1_tip">
+                <geom mesh="l_1_tip" />
+            </default>
+
+            <default class="dg3f/visual/visual_l_2_1">
+                <geom mesh="l_2_1" />
+            </default>
+            <default class="dg3f/visual/visual_l_2_2">
+                <geom mesh="l_2_2" />
+            </default>
+            <default class="dg3f/visual/visual_l_2_3">
+                <geom mesh="l_2_3" />
+            </default>
+            <default class="dg3f/visual/visual_l_2_4">
+                <geom mesh="l_2_4" />
+            </default>
+            <default class="dg3f/visual/visual_l_2_tip">
+                <geom mesh="l_2_tip" />
+            </default>
+        </default>
+    </default>
+</default>
